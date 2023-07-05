@@ -1,0 +1,9 @@
+mixin Card(className)
+    - var classes = "col-6 col-sm-12 col-lg-5 flat-card rounded mx-2 my-5 bg-" + className +"-subtle position-relative"
+    a(href='#',class=classes)
+        .p-3
+          img.img-responsive.position-absolute(src='../img/nawy-now-logo.svg' alt='')
+          h4.h4.text-warning-emphasis.upper-case Nawy Now
+          p.text-primary-emphasis Don&apos;t Wait, Move Now &amp; Pay Later With Nawy Now
+        .footer
+          span Learn More

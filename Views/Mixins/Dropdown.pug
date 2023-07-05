@@ -1,0 +1,10 @@
+mixin Dropdown(text,list)
+    .dropdown
+        button.btn.btn-secondary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false")=text
+  
+        ul.dropdown-menu
+            for item,index in list
+                li
+                  a.dropdown-item(href="#")=item[0]
+                     i(class=item[1])  
+  
