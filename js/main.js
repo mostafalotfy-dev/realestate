@@ -12,4 +12,5 @@ $('.slider').slick({
     dots:true
   }
   );
+  
 }($))
