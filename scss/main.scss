@@ -1,4 +1,5 @@
 @import "./variables";
+
 @import "~bootstrap/scss/bootstrap";
 
 @import "./slick/slick.css";
@@ -7,8 +8,9 @@
 * {
     background-size: cover;
     background-repeat: no-repeat;
-}
+    
 
+}
 .bg-cover {
     background: url("https://www.nawy.com/assets/images/home-images/landing-background.jpg"), rgba(0, 0, 0, .7);
 }
@@ -17,8 +19,9 @@
     height: calc(100vh - 100px) !important;
 }
 
-.rectangle {
-    background-color: rgba(255, 255, 255, .898);
+.bg-secondary {
+    background-color: rgba(255, 255, 255, .898) !important;
+  
 }
 
 .move-d-60 {
@@ -206,4 +209,12 @@ li {
     padding: 0;
     margin: 0;
 }
+}
+@include color-mode(dark){
+    .bg-secondary{
+        background-color: rgba(0,0,0,.898) !important;
+    }
+    footer a{
+        color:white
+    }
 }
