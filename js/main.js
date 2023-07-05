@@ -19,7 +19,8 @@ $('.slider').slick({
     "light":"dark",
     "dark":"light"
    }
-debugger
-   html.attr("bs-theme",props[html.attr("data-bs-theme")])
+
+   
+   html.attr("data-bs-theme",props[html.attr("data-bs-theme")])
   })
 }($))

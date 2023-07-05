@@ -1,6 +1,6 @@
-extend app.pug
-include Mixins/Card
-include Mixins/Dropdown
+extend landing.pug
+include ../../Mixins/Card
+include ../../Mixins/Dropdown
 block content
   .container
     nav.navbar.navbar-expand-lg.bg-body-tertiary.fixed-top
@@ -13,21 +13,7 @@ block content
             li.nav-item
               a.nav-link.active(aria-current='page' href='#') Home
             li.nav-item
-              a.nav-link(href='#') Link
-            li.nav-item.dropdown
-              a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-                | Dropdown
-              ul.dropdown-menu
-                li
-                  a.dropdown-item(href='#') Action
-                li
-                  a.dropdown-item(href='#') Another action
-                li
-                  hr.dropdown-divider
-                li
-                  a.dropdown-item(href='#') Something else here
-                li.nav-item
-                  a.nav-link.disabled Disabled
+              a.nav-link(href='#') Sell
           button.btn.btn-primary-subtle#mode Mode
   // End Nav
   // Banner
@@ -181,39 +167,5 @@ block content
             textarea#message.form-control(name='message' rows='2')
           button.btn.btn-primary.col-12(type='submit') Submit
   // Form End
-  footer
-    .mt-4.card
-      .card-body.container
-        .row
-       
-          .col-sm-6.col-lg-3
-            ul.footer-container.mb-3
-
-              li
-                p.h6.text-primary Areas
-              for item in ["New Cairo","New Cairo","New Cairo","New Cairo"] 
-                li: a=item
-          .col-sm-6.col-lg-3
-            ul.footer-container.mb-3
-
-              li
-                p.h6.text-primary Areas
-              for item in ["New Cairo","New Cairo","New Cairo","New Cairo"] 
-                li: a=item
-          .col-sm-6.col-lg-3
-            ul.footer-container.mb-3
-
-              li
-                p.h6.text-primary Areas
-              for item in ["New Cairo","New Cairo","New Cairo","New Cairo"] 
-                li: a=item
-          .col-sm-6.col-lg-3
-            ul.footer-container.mb-3
-
-              li
-                p.h6.text-primary Areas
-              for item in ["New Cairo","New Cairo","New Cairo","New Cairo"] 
-                li: a=item
-      
 
 
