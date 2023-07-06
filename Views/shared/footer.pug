@@ -4,8 +4,9 @@ footer
     .mt-4.card
         .card-body.container
             .row
-                +FooterList("Areas",["New Cairo","Giza","Haram"],["#","#","#"])
+                for item in [["Areas",["New Cairo","Giza","Haram"],["#","#","#"]],["Areas",["New Cairo","Giza","Haram"],["#","#","#"]],["Areas",["New Cairo","Giza","Haram"],["#","#","#"]],["Areas",["New Cairo","Giza","Haram"],["#","#","#"]]]
+                    +FooterList(item[0],item[1],item[2])
         hr
         p.mx-2 Copyright 2023
             
-script(src='dist/main.js')
+script(src='../main.js')

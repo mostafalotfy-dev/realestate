@@ -6,5 +6,5 @@ exports.pug = function(){
     return src("Views/View/*/index.pug")
     .pipe(pug())
     .pipe(prettify())
-    .pipe(dest("./output"))
+    .pipe(dest("./dist"))
 }
