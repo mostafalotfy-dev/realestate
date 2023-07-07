@@ -1,97 +1,80 @@
 extend landing.pug
-include ../../Mixins/Card
-include ../../Mixins/Dropdown
-include ../../Mixins/TopCard
+
 block content
-  .container
-    nav.navbar.navbar-expand-lg.bg-body-tertiary.fixed-top
-      .container-fluid
-        a.navbar-brand(href='#') Navbar
-        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.mx-auto.me-auto.mb-2.mb-lg-0
-            li.nav-item
-              a.nav-link.active(aria-current='page' href='index.html') Home
-            li.nav-item
-              a.nav-link(href='sell.html') Search
-          button.btn.btn-primary-subtle#mode Mode
-  // End Nav
-  // Banner
-  .container-fluid.vh-100.mb-5.bg-cover
-    .container.position-relative.move-d-60.col-12.mx-auto.my-0
-      .content
-        h1.h1.text-white Find Your New Home
-        p.text-white
-          | Search &amp; compare among 5000+ properties and 500+ compounds or list your old property for
-          | sale
-        .bg-secondary.p-3.rounded
-          .row
-            .my-2.col-xs-12.col-sm-12.col-lg-4
-              select#area.form-select(name='area')
-            .my-2.col-sm-12.col-lg-2
-              select#property_type.form-select(name='property_type')
-            .my-2.col-sm-12.col-lg-2
-              select#bedrooms.form-select(name='bedrooms')
-            .my-2.col-sm-12.col-lg-2
-              select#price.form-select(name='price')
-            .col-sm-12.col-lg-2
-              button.btn.btn-primary.btn-lg Search
-  // End Banner
-  // Slider
-  .container
-    h4.h4.capitalize Top Compounds
-    p 21 Results Available
-    .slider
-      .box.m-1
-        .position-relative
-          img.img-fluid.rounded.z-index--1(width='300' height='300' alt='logo' src='../../img/1.jpg')
-          .position-absolute.rounded.box.overlay.z-index-10.simi-black
-          p.h6.capitalize.position-absolute.text-overlay-center ZED State
-      .box.m-1
-        .position-relative
-          img.img-fluid.rounded.z-index--1(alt='logo' src='../../img/1.jpg')
-          .position-absolute.rounded.box.overlay.z-index-10.simi-black
-          p.h6.capitalize.position-absolute.text-overlay-center ZED State
-      .box.m-1
-        .position-relative
-          img.img-fluid.rounded.z-index--1(alt='logo' src='../../img/1.jpg')
-          .position-absolute.rounded.box.overlay.z-index-10.simi-black
-          p.h6.capitalize.position-absolute.text-overlay-center ZED State
-      .box.m-1
-        .position-relative
-          img.img-fluid.rounded.z-index--1(alt='logo' src='../../img/1.jpg')
-          .position-absolute.rounded.box.overlay.z-index-10.simi-black
-          p.h6.capitalize.position-absolute.text-overlay-center ZED State
-  // End Slider
-  // Cards (Top Areas)
-  .container.mt-2.mb-5
-    h4.h4.capitalize Top Areas
-    p.capitalize 19 Available Areas
-    .row
-      for item in [["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"],["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"],["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"],["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"]]
-        +TopCard(item[0])
-          h4=item[1]
-          p=item[2]
-          p=item[3]
-     
-  // End Cards (Top Areas)
-  // First Card
-  .container.mt-5
-    .row
-       +Card("warning")
-      
-          img.img-top-right.img-responsive.position-absolute(src='../../img/nawy-now-logo.svg' alt='')
-          h4.h4.text-warning-emphasis.upper-case Nawy Now
-          p.text-primary-emphasis Don&apos;t Wait, Move Now &amp; Pay Later With Nawy Now
-       +Card("info")
-      
-          img.img-top-right.img-responsive.position-absolute(src='../../img/nawy-now-logo.svg' alt='')
-          h4.h4.text-info-emphasis.upper-case Nawy Now
-          p.text-primary-emphasis Don&apos;t Wait, Move Now &amp; Pay Later With Nawy Now
-  // End First Cards
-  // Form
-  include includes/Form
-  // Form End
+    .container
+      nav.navbar.navbar-expand-lg.bg-body-tertiary.fixed-top
+        .container-fluid
+          a.navbar-brand.selection-warning(href='#') Navbar
+          button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mx-auto.me-auto.mb-2.mb-lg-0
+              li.nav-item
+                a.nav-link.active(aria-current='page' href='index.html') Home
+              li.nav-item
+                a.nav-link(href='sell.html') Search
+            button.btn.btn-primary-subtle#mode Mode
+    // End Nav
+    // Banner
+    .container-fluid.vh-100.mb-5.bg-cover
+      .container.position-relative.move-d-60.col-12.mx-auto.my-0
+        .content
+          h1.h1.text-white.selection-warning Find Your New Home
+          p.text-white.selection-warning
+            | Search &amp; compare among 5000+ properties and 500+ compounds or list your old property for
+            | sale
+          .bg-secondary.p-3.rounded
+            .row
+              .my-2.col-xs-12.col-sm-12.col-lg-4
+                select#area.form-select(name='area')
+              .my-2.col-sm-12.col-lg-2
+                select#property_type.form-select(name='property_type')
+              .my-2.col-sm-12.col-lg-2
+                select#bedrooms.form-select(name='bedrooms')
+              .my-2.col-sm-12.col-lg-2
+                select#price.form-select(name='price')
+              .col-sm-12.col-lg-2
+                button.btn.btn-primary.btn-lg Search
+    // End Banner
+    // Slider
+    .container
+      h4.h4.capitalize Top Compounds
+      p 21 Results Available
+      +Slider
+        .swiper-slide
+          img(src="../../../img/1.jpeg")
+        .swiper-slide
+          img(src="../../../img/1.jpeg")
+        .swiper-slide
+          img(src="../../../img/1.jpeg")
+        .swiper-slide
+          img(src="../../../img/1.jpeg")
+      // End Slider
+    // Cards (Top Areas)
+    .container.mt-2.mb-5
+      h4.h4.capitalize Top Areas
+      p.capitalize 19 Available Areas
+      .row
+        for item in [["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"],["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"],["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"],["../../img/1.jpg","Ain Sokna","52 compounds","327 area properties"]]
+          +TopCard(item[0])
+            h4=item[1]
+            p=item[2]
+            p=item[3]
+    // End Cards (Top Areas)
+    // First Card
+    .container.mt-5
+      .row
+        +Card("warning")
+            img.img-top-right.img-responsive.position-absolute(src='../../img/nawy-now-logo.svg' alt='')
+            h4.h4.text-warning-emphasis.upper-case Nawy Now
+            p.text-primary-emphasis Don&apos;t Wait, Move Now &amp; Pay Later With Nawy Now
+        +Card("info")
+            img.img-top-right.img-responsive.position-absolute(src='../../img/nawy-now-logo.svg' alt='')
+            h4.h4.text-info-emphasis.upper-case Nawy Now
+            p.text-primary-emphasis.selection-warning Don&apos;t Wait, Move Now &amp; Pay Later With Nawy Now
+    // End First Cards
+    // Form
+    include includes/Form
+    // Form End
 
 

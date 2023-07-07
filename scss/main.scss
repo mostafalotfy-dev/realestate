@@ -1,9 +1,14 @@
+
+// Required Core Stylesheet
+@import "~@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "~@glidejs/glide/src/assets/sass/glide.theme";
 @import "./variables";
 
 @import "~bootstrap/scss/bootstrap";
 
-@import "./slick/slick.css";
-@import "./slick/slick-theme";
+@import "./functions";
 
 * {
     background-size: cover;
@@ -13,10 +18,12 @@
 }
 .bg-cover {
     background: url("https://www.nawy.com/assets/images/home-images/landing-background.jpg"), rgba(0, 0, 0, .7);
+    
 }
 
 .vh-100 {
-    height: calc(100vh - 100px) !important;
+    height: clamp(500px ,100vh,100vh) !important;
+   
 }
 
 .bg-secondary {
@@ -138,11 +145,6 @@ a {
 
 }
 
-.title {
-    color: rgb(255, 94, 0);
-    text-decoration: none;
-
-}
 
 @each $name ,
 $align,
@@ -204,11 +206,11 @@ li {
 
     padding: 0;
     margin: 0;
-}
-}
+}}
+
 @include color-mode(dark){
     .bg-secondary{
-        background-color: rgba(0,0,0,.898) !important;
+        background-color: mix(black, rgba(255,255,255,0.1),80%)!important;
     }
     footer a{
         color:white
