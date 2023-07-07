@@ -1,0 +1,22 @@
+include ../Mixins/OffCanvas
++OffCanvas("Button","Menu","Click")
+    li.
+nav.navbar.navbar-expand-lg.bg-body-tertiary
+
+    .container-fluid
+        include ../includes/OffCanvasButton
+        a.navbar-brand(href='#') Navbar
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mb-2.mx-auto.me-auto
+                li.nav-item.col-lg-12
+                    input.form-control(type='search' placeholder='Search' aria-label='Search')
+                li.nav-item
+                    button.btn.btn-secondary-subtle
+                        i.fa.fa-control
+                li.nav-item
+            button.btn.btn-secondary-subtle
+                | English
+
+

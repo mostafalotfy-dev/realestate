@@ -1,0 +1,7 @@
+mixin OffCanvas(offcanvasText,header,placeholder,dropdownText)
+    #offcanvasExample.offcanvas.offcanvas-start(tabindex='-1', aria-labelledby='offcanvasExampleLabel')
+        .offcanvas-header
+            h5#offcanvasExampleLabel.offcanvas-title=header
+            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+        .offcanvas-body
+            block

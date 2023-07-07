@@ -8,10 +8,10 @@ pugwatch = exports.pug = function(cb){
     .pipe(prettify())
     .pipe(dest("./dist"))
    
- cb()
+     cb()
 }
 
-exports.watch = (cb)=>{
+exports.watch = ()=>{
     watch("Views/View/*/index.pug",pugwatch)
   
   

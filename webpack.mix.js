@@ -2,9 +2,9 @@ const mix = require("laravel-mix");
 
 
 mix
-.sass("scss/main.scss","dist")
+.sass("fontawesome/scss/main.scss","dist")
 
-.js("js/main.js","dist")
+.js("fontawesome/js/main.js","dist")
 .disableSuccessNotifications()
 
 

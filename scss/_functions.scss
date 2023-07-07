@@ -1,8 +1,0 @@
-@each $key,$color in $theme-colors{
-    .selection-#{$key}::selection{
-       color:white;
-        background-color: $color;
-    }
-    
-}
-

@@ -1,7 +1,13 @@
 mixin Slider
-    .glide
-        .glide__track(data-glide-el='track')
-            ul.glide__slides
-                li.glide__slide
-                li.glide__slide
-                li.glide__slide
+    .swiper
+        // Additional required wrapper
+        .swiper-wrapper
+           block
+        // If we need pagination
+        .swiper-pagination
+        // If we need navigation buttons
+        .swiper-button-prev
+        .swiper-button-next
+        // If we need scrollbar
+        .swiper-scrollbar
+
