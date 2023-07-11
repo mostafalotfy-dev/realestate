@@ -2,6 +2,25 @@ include ../../shared/header
 
 block content
     include ../../includes/Navbar
-    
+    .container
+        .row
+            for i in [1,2,3,4,5,6]
+                .col-lg-4.mt-2
+                    .card
+                        ul.card-top-right
+                            li.d-inline.bg-circle.p-1.bg-simi-black.text-center.text-white: a(href="#"): i.fa-regular.fa-heart
+                            li.d-inline.bg-circle.p-1.bg-simi-black.text-center.text-white: a(href="#"): i.fa-regular.fa-heart
+                            li.d-inline.bg-circle.p-1.bg-simi-black.text-center.text-white: a(href="#"): i.fa-regular.fa-heart
+                        .card-top-left.bg-circle.bg-simi-black.text-center.text-white: a(href="#"): i.fa-regular.fa-heart
+                        img.card-img-top(src="../../img/2.jpeg")
+                        .card-body
+                            .card-title.fw-bold Mountain View ICity
+                            .card-text.my-1 New Cairo, Egypt
+                            .card-subtitle: p 38 Apartment | Villa | Townhouse | More
+                
+
+                    
+                        
+
 
 include ../../shared/footer

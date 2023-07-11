@@ -143,16 +143,27 @@ a {
 
 
 @each $name ,
-$align,
-$position in "bottom-left" left bottom,
+$x,
+$y in "bottom-left" left bottom,
 "bottom-right" right bottom,
-"top-right" top right,
-"top-left" top left {
+"top-right" right top,
+"top-left" left top {
     .img-#{$name} {
 
-        #{$align}: 0;
-        #{$position}: 0;
+        #{$x}: 0;
+        #{$y}: 0;
+        position: absolute;
         overflow: hidden;
+        z-index: 9999;
+    }
+    .card .card-#{$name}{
+        #{$x}:20px !important;
+        #{$y}:10px !important;
+        position: absolute;
+        overflow: hidden;
+        z-index: 99;
+        
+        
     }
 }
 
