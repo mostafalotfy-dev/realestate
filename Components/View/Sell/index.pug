@@ -2,7 +2,15 @@ include ../../shared/header
 
 block content
     include ../../includes/Navbar
+    .border.border-primary.shadow
+        .container
+            div.d-inline
+            div.d-inline i.fas
+            div.d-inline
+    
     .container
+        span.h3.text-primary Compounds 
+        span.h6 536 results
         .row
             for i in [1,2,3,4,5,6]
                 .col-lg-4.mt-2
@@ -14,13 +22,8 @@ block content
                         .card-top-left.bg-circle.bg-simi-black.text-center.text-white: a(href="#"): i.fa-regular.fa-heart
                         img.card-img-top(src="../../img/2.jpeg")
                         .card-body
-                            .card-title.fw-bold Mountain View ICity
+                            .card-title.fw-bold.text-primary Mountain View ICity
                             .card-text.my-1 New Cairo, Egypt
                             .card-subtitle: p 38 Apartment | Villa | Townhouse | More
                 
-
-                    
-                        
-
-
 include ../../shared/footer
