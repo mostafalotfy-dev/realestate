@@ -8,7 +8,6 @@ import 'swiper/css/bundle';
 
 const $ = require("jquery")
 
-
 $(function($){
   $("#mode").on("click",(e)=>{
     e.preventDefault();

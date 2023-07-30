@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",
-    "landing": "pug  ./Components/View/Landing/index.pug -o dist -P  -w",
+    "landing": "pug  ./Components/View/Landing/index.pug -o dist/Landing -P  -w",
    
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress  --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
