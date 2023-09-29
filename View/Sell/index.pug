@@ -1,7 +1,7 @@
 extend ../Landing/landing.pug
 
 block content
-    include ../../includes/Navbar
+    include ../../Components/includes/Navbar
     .border.border-primary.shadow
         .container
             div.d-inline
@@ -12,7 +12,7 @@ block content
         span.h3.text-primary Compounds 
         span.h6 536 results
         .row
-            for i in [1,2,3,4,5,6]
+           - for( let i = 0 ; i < 6; i++ )
                 .col-lg-4.mt-2
                     .card
                         ul.card-top-right
