@@ -6,7 +6,7 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
 
-const $ = require("jquery")
+import $ from "jquery"
 
 $(function($){
   $("#mode").on("click",(e)=>{
@@ -21,8 +21,6 @@ $(function($){
 
 
 html.attr("data-bs-theme",props[html.attr("data-bs-theme")])})
-// init Swiper:
-
 
 
 }($))
