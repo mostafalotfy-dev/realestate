@@ -29,6 +29,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Build Html
+        id: build
+        run: |
+         npm run html
+      - name: Build Sass
+        id: scss
+        run: |
+           npm run prod
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
